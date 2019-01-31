@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!--基本信息-->
+	<description>Demo project for Spring Boot</description>
+	<modelVersion>4.0.0</modelVersion>
+	<name>modules</name>
+	<packaging>pom</packaging>
+
+	<!--父项目-->
+	<groupId>com.example</groupId>
+	<artifactId>modules</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!--继承说明，继承SpringBoot提供的父项目-->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!--模块说明：声明多个子模块-->
+	<modules>
+		<module>module-web</module>
+		<module>module-service</module>
+		<module>module-dao</module>
+		<module>module-entity</module>
+		<module>module-common</module>
+	</modules>
+
+	<!--版本说明：统一管理依赖的版本号-->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.lieve</groupId>
+				<artifactId>module-web</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lieve</groupId>
+				<artifactId>module-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lieve</groupId>
+				<artifactId>module-dao</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lieve</groupId>
+				<artifactId>module-entity</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

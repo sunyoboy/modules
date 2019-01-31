@@ -1,0 +1,10 @@
+
+# CAS Java Client config
+# cas.server-url-prefix=https://cashost.com/cas
+# cas.server-login-url=https://cashost.com/cas/login
+# cas.client-host-url=https://casclient.com
+cas:
+  validation-type: cas3
+  server-url-prefix: http://127.0.0.1:8081/cas
+  server-login-url: http://127.0.0.1:8081/cas/login
+  client-host-url: http://127.0.0.1:9099
